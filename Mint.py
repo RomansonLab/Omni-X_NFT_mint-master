@@ -75,7 +75,7 @@ def OmniNFT(private_key):
     estimated_gas = contract.functions.mint(_nbTokens).estimate_gas({'from': account.address, })
 
     # Расчет лимита газа и цены газа для транзакции
-    gas_limit = int(estimated_gas * 1.5)
+    gas_limit = int(estimated_gas * 1.8)
     max_gwei = round(random.uniform(0.001397986, 0.002397986 ), 9)
     max_priority_gwei = round(random.uniform(0.000000350, 0.000000600), 9)
     max_wei = max_gwei * 1e9
